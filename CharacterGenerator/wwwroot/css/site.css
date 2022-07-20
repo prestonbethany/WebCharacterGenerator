@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#content {
+    margin: 3em 7em 1em 7em;
+    border: 0.2em solid;
+}
+
+#globalFooter {
+    text-align: center;
+}
