@@ -1,5 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Stats Page";
 }
-
-Lorem ipsum
+<div class="statArea">
+    @for (int i = 0; i < 6; i++) {
+        <div class="rollPair">
+            <input type="text" readonly class="abilityRoll"/>
+            <select class="abilityDropdown">
+                <option>Lorem Ipsum</option>
+            </select>
+        </div>
+    }
+</div>
