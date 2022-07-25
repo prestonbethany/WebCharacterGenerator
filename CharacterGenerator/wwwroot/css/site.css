@@ -23,3 +23,10 @@
 .statArea {
 
 }
+
+.nameBox {
+    display: block;
+    margin: 0.6em auto;
+    text-align: center;
+    width: 60%;
+}

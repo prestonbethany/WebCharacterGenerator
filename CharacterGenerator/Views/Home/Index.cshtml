@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Stats Page";
 }
+
+<input type="text" class="nameBox" placeholder="Character Name Goes Here"/>
+
 <div class="statArea">
     @for (int i = 0; i < 6; i++) {
         <div class="rollPair">
@@ -8,6 +11,13 @@
             <select class="abilityDropdown">
                 <option>Lorem Ipsum</option>
             </select>
+            <!--TODO: This seems like the wrong way to do this; research a better way later-->
+            @if (i == 5) {
+                <div class="statsStateButtons">
+                    <input type="button" value="Next" id="statsNextButton"/>
+                </div>
+            }
         </div>
     }
 </div>
+
