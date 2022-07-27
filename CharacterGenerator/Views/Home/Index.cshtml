@@ -2,22 +2,30 @@
     ViewData["Title"] = "Stats Page";
 }
 
+<script src="~/js/index.js"></script>
+
 <input type="text" class="nameBox" placeholder="Character Name Goes Here"/>
 
 <div class="statArea">
     @for (int i = 0; i < 6; i++) {
         <div class="rollPair">
-            <input type="text" readonly class="abilityRoll"/>
-            <select class="abilityDropdown">
+            <input type="text" readonly class="abilityRoll" id="roll@(i)"/>
+            <select class="abilityDropdown" id="ability@(i)">
                 <option>Lorem Ipsum</option>
             </select>
             <!--TODO: This seems like the wrong way to do this; research a better way later-->
-            @if (i == 5) {
+@*            @if (i == 5) {
                 <div class="statsStateButtons">
                     <input type="button" value="Next" id="statsNextButton"/>
                 </div>
-            }
+            }*@
         </div>
     }
+    
+    <div class="statsStateButtons">
+        <input type="button" value="Roll your stats!" id="statsRollButton"/>
+        <input type="button" value="Next" id="statsNextButton"/>
+    </div>
+
 </div>
 
