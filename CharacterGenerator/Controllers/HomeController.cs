@@ -13,6 +13,16 @@ namespace CharacterGenerator.Controllers
             _logger = logger;
         }
 
+        public int[] statRoller()
+        {
+            var myStats = new int[6];
+            for (int i = 0; i < 6; i++)
+            {
+                myStats[i] = Engine.statRoller();
+            }
+            return myStats;
+        }
+
         public IActionResult Index()
         {
             return View();

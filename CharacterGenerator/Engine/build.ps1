@@ -1,0 +1,1 @@
+﻿cl .\RollerEngine.c /D_WINDLL /DROLLER_ENGINE_EXPORTS /link /DLL /OUT:..\RollerEngine.dll
