@@ -5,6 +5,11 @@
     border: 0.2em solid;
 }
 
+#statsForm {
+    display: flex;
+    flex-direction: column;
+}
+
 #globalFooter {
     text-align: center;
 }

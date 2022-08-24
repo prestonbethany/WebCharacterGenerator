@@ -4,27 +4,28 @@
 
 <script src="~/js/index.js"></script>
 
-<input type="text" class="nameBox" placeholder="Character Name Goes Here"/>
+<form action="/home/results" method="post" id="statsForm">
 
-<div class="statArea">
-    @for (int i = 0; i < 6; i++) {
-        <div class="rollPair">
-            <input type="text" readonly class="abilityRoll" id="roll@(i)"/>
-            <select class="abilityDropdown" id="ability@(i)">
-                <option>Lorem Ipsum</option>
-            </select>
-@*            @if (i == 5) {
-                <div class="statsStateButtons">
-                    <input type="button" value="Next" id="statsNextButton"/>
-                </div>
-            }*@
+    <input type="text" class="nameBox" placeholder="Character Name Goes Here" name="submittedName"/>
+
+    <div class="statArea">
+        @for (int i = 0; i < 6; i++) 
+        {
+            <div class="rollPair">
+                <input type="text" readonly class="abilityRoll" id="roll@(i)" name="roll@(i)"/>
+                <select class="abilityDropdown" id="ability@(i)" name="ability@(i)">
+                    <option>Strength</option>
+                    <option>Dexterity</option>
+                    <option>Constitution</option>
+                    <option>Intelligence</option>
+                    <option>Wisdom</option>
+                    <option>Charisma</option>
+                </select>
+            </div>
+        }
+        <div class="statsStateButtons">
+            <input type="button" value="Roll your stats!" id="statsRollButton"/>
+            <input type="submit" value="Next" id="statsNextButton"/>
         </div>
-    }
-    
-    <div class="statsStateButtons">
-        <input type="button" value="Roll your stats!" id="statsRollButton"/>
-        <input type="button" value="Next" id="statsNextButton"/>
     </div>
-
-</div>
-
+</form>

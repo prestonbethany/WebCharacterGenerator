@@ -28,6 +28,11 @@ namespace CharacterGenerator.Controllers
             return View();
         }
 
+        public IActionResult Results()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
